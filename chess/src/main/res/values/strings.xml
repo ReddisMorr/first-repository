@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Chess</string>
+    <string name="btn1">4 клеточная шахматная доска</string>
+    <string name="btn2">6 клеточная шахматная доска</string>
+    <string name="btn3">8 клеточная шахматная доска</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="c">c</string>
+    <string name="d">d</string>
+    <string name="e">e</string>
+    <string name="f">f</string>
+    <string name="g">g</string>
+    <string name="h">h</string>
+</resources>

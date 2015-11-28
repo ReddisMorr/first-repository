@@ -1,17 +1,16 @@
-package com.company.mychess.figure;
+package com.example.thi.chess.myChess.Figures;
 
-import com.company.mychess.FigureType;
-import com.company.mychess.Constants;
-import com.company.mychess.Move;
+import com.example.thi.chess.myChess.Constants;
+import com.example.thi.chess.myChess.FigureType;
+import com.example.thi.chess.myChess.Move;
 
 /**
- * Created by teacher on 23.11.2015.
- * Слон/Офицер
+ * Created by THI on 28.11.2015.
  */
 public class Bishop extends Figure implements Move {
 
     public Bishop(int x, int y, FigureType type) {
-        super(x, y, type);//вызов родительского конструктора
+        super(x, y, type);
     }
 
     public void move(int x, int y) throws Exception {

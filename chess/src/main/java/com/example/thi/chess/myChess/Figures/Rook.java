@@ -1,21 +1,15 @@
-package com.company.mychess.figure;
+package com.example.thi.chess.myChess.Figures;
 
-import com.company.mychess.FigureType;
-import com.company.mychess.Constants;
-import com.company.mychess.Move;
 
-import java.lang.Exception;
-import java.lang.Math;
+import com.example.thi.chess.myChess.Constants;
+import com.example.thi.chess.myChess.FigureType;
+import com.example.thi.chess.myChess.Move;
 
-/**
- * Created by teacher on 23.11.2015.
- * Ладья\ Турка
- */
 public class Rook extends Figure implements Move {
     public Rook(int x, int y, FigureType type) {
         super(x, y, type);
     }
-    public void move(int x, int y, FigureTipe type)throws Exception{
+    public void move(int x, int y)throws Exception{
         if((this.x-x==0&& this.y-y!=0)||(this.y-y==0&&this.x-x!=0)){
             this.y=y;
             this.x=x;
@@ -24,5 +18,6 @@ public class Rook extends Figure implements Move {
         }
 
     }
+
 
 }

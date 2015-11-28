@@ -1,9 +1,8 @@
-package com.company.mychess;
+package com.example.thi.chess.myChess;
 
 /**
- * Created by dimas on 11/24/2015.
+ * Created by THI on 28.11.2015.
  */
 public interface Constants {
-
     String ILLEGAL_MOVE_MSG = "Illegal move";
 }
