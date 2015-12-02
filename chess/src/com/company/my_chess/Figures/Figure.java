@@ -1,8 +1,8 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
 
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
 
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
 
 public abstract class Figure implements Move {
     protected int x;

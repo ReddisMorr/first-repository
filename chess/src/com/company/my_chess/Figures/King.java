@@ -1,9 +1,8 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
 
-import com.example.thi.chess.myChess.Constants;
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
-
+import com.company.my_chess.Constants;
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
 
 public class King extends Figure implements Move {
     public King(int x, int y, FigureType type) {
@@ -11,7 +10,7 @@ public class King extends Figure implements Move {
     }
 
     public void move(int x, int y) throws Exception {
-        if (this.y != y || this.x != x) {
+        if ( y==1 || x==1 ){
             this.y = y;
             this.x = x;
         } else {

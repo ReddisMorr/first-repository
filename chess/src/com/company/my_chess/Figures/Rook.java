@@ -1,9 +1,10 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
+
+import com.company.my_chess.Constants;
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
 
 
-import com.example.thi.chess.myChess.Constants;
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
 
 public class Rook extends Figure implements Move {
     public Rook(int x, int y, FigureType type) {
@@ -21,3 +22,4 @@ public class Rook extends Figure implements Move {
 
 
 }
+

@@ -1,8 +1,8 @@
-package com.example.thi.chess.myChess;
+package com.company.my_chess;
 
-import com.example.thi.chess.myChess.Figures.Bishop;
-import com.example.thi.chess.myChess.Figures.Figure;
-import com.example.thi.chess.myChess.Figures.Pawn;
+import com.company.my_chess.Figures.Bishop;
+import com.company.my_chess.Figures.Figure;
+import com.company.my_chess.Figures.Pawn;
 
 import java.util.ArrayList;
 import java.util.List;

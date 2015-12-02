@@ -1,10 +1,12 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
 
+import com.company.my_chess.Constants;
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
 
-import com.example.thi.chess.myChess.Constants;
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
-
+/**
+ * Created by THI on 02.12.2015.
+ */
 public class Queen extends Figure implements Move {
     public Queen(int x, int y, FigureType type) {
         super(x, y, type);
@@ -20,3 +22,4 @@ public class Queen extends Figure implements Move {
     }
 
 }
+

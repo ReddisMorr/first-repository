@@ -1,9 +1,9 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
 
 
-import com.example.thi.chess.myChess.Constants;
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
+import com.company.my_chess.Constants;
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
 
 public class Pawn extends Figure implements Move {
     public Pawn(int x, int y, FigureType type) {
@@ -32,3 +32,4 @@ public class Pawn extends Figure implements Move {
         }
     }
 }
+

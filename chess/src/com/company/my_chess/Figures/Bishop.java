@@ -1,12 +1,10 @@
-package com.example.thi.chess.myChess.Figures;
+package com.company.my_chess.Figures;
 
-import com.example.thi.chess.myChess.Constants;
-import com.example.thi.chess.myChess.FigureType;
-import com.example.thi.chess.myChess.Move;
 
-/**
- * Created by THI on 28.11.2015.
- */
+import com.company.my_chess.Constants;
+import com.company.my_chess.FigureType;
+import com.company.my_chess.Move;
+
 public class Bishop extends Figure implements Move {
 
     public Bishop(int x, int y, FigureType type) {
@@ -22,3 +20,4 @@ public class Bishop extends Figure implements Move {
         }
     }
 }
+

@@ -1,6 +1,7 @@
-package com.example.thi.chess.myChess;
+package com.company.my_chess;
 
 
 public enum FigureType {
     BLACK, WHITE
 }
+

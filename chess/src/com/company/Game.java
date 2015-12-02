@@ -1,8 +1,7 @@
-package com.example.thi.chess;
+package com.company;
 
-
-import com.example.thi.chess.myChess.Chess;
-import com.example.thi.chess.myChess.Figures.Figure;
+import com.company.my_chess.Chess;
+import com.company.my_chess.Figures.Figure;
 
 public class Game {
 
@@ -16,5 +15,6 @@ public class Game {
         figure = chess.pickFigure(7, 7);
         chess.makeMove(figure, 6, 6);
         chess.endTurn();
+
     }
 }
