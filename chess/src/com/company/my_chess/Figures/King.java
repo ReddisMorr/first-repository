@@ -10,7 +10,7 @@ public class King extends Figure implements Move {
     }
 
     public void move(int x, int y) throws Exception {
-        if ( y==1 || x==1 ){
+        if ( Math.abs(this.y-y)==1 || Math.abs(this.x-x)==1 ){
             this.y = y;
             this.x = x;
         } else {
