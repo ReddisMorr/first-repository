@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         btn=(Button)findViewById(R.id.btn);
     }
     public void onClick(View v){
+        fin_den.setText("");
+        tir.setText("");
+        fin_num.setText("");
         int frn=0, frd=1, scn=0, scd=1;
         try {
             frn = Integer.parseInt(fr_num.getText().toString());
@@ -52,10 +55,14 @@ public class MainActivity extends AppCompatActivity {
             Fraction first = new Fraction(frn, frd);
             Fraction second = new Fraction(scn, scd);
             first.add(second);
-            fin_num.setText(first.getNumerator());
+            int f=first.getNumerator();
+            String t=Integer.toString(f);
+            fin_num.setText(t);
             if(first.getDenominator()!=1){
                 tir.setText("--------");
-                fin_den.setText(first.getDenominator());
+                f=first.getDenominator();
+                t =Integer.toString(f);
+                fin_den.setText(t);
             }else{
                 Toast toast = Toast.makeText(getApplicationContext(),
                         "Т.к. знаменатель дроби равен 1, дробь равна ее числителю.", Toast.LENGTH_LONG);
