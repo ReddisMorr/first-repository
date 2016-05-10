@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bubble_breaker">Lines v0.1</string>
+    <string name="app_name">Lines</string>
+    <string name="bb_layout_text_text"></string>
+    <string name="mode_ready">Bubble Breaker v0.1\nPress Down To Play</string>
+    <string name="mode_pause">Paused\nPress Down To Resume</string>
+    <string name="mode_lose_prefix">Game Over\nScore: </string>
+    <string name="mode_lose_suffix">\nPress Back To Create New Game</string>
+
+</resources>
