@@ -97,9 +97,9 @@ public class MainActivity extends AppCompatActivity {
         Player p54 = new Player("Filth4", 22, team5.getId()); dbHelper.createPlayer(p54);
         Player p55 = new Player("Filth5", 21, team5.getId()); dbHelper.createPlayer(p55);
 
-        Match m1 = new Match(context, team3.getId(), team5.getId(), "4:20");
-        Match m2 = new Match(context, team2.getId(), team1.getId(), "13:37");
-        Match m3 = new Match(context, team5.getId(), team4.getId(), "14:88");
+        Match m1 = new Match( team3, team5, "4:20");
+        Match m2 = new Match( team2, team1, "13:37");
+        Match m3 = new Match( team5, team4, "14:88");
         dbHelper.createMatch(m1);
         dbHelper.createMatch(m2);
         dbHelper.createMatch(m3);

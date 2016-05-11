@@ -117,7 +117,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public ArrayList<Team> findAllTeams() {
         ArrayList<Team> teams = new ArrayList<>();
-        String query = "SELECT * FROM " + TABLE_TEAMS;
+        String query = "SELECT DISTINCT * FROM " + TABLE_TEAMS;
         SQLiteDatabase database = getReadableDatabase();
         Cursor cursor = database.rawQuery(query, null);
         if (cursor.moveToFirst()) {
@@ -131,10 +131,11 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public Match cursorToMatch (Cursor cursor) {
-        Match match = new Match(context);
+        DBHelper dbHelper=new DBHelper(context);
+        Match match = new Match();
+        match.setTeam1(dbHelper.findTeamById(cursor.getLong(1)));
+        match.setTeam2(dbHelper.findTeamById(cursor.getLong(2)));
         match.setId(cursor.getLong(0));
-        match.setTeam1id(cursor.getLong(1));
-        match.setTeam2id(cursor.getLong(2));
         match.setStartTime(cursor.getString(3));
         match.setWinnerId(cursor.getLong(4));
         return match;

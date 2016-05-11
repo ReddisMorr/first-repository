@@ -3,7 +3,6 @@ package com.example.thi.championship;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +35,7 @@ public class MatchWork extends AppCompatActivity {
 
         boolean isNew = getIntent().getExtras().getBoolean("isNew");
         if (isNew) {
-            final Match match = new Match(this);
+            final Match match = new Match();
             final DBHelper dbHelper = new DBHelper(this);
             final ArrayList<Team> allTeams = dbHelper.findAllTeams();
             ArrayAdapter<Team> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, allTeams);

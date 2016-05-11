@@ -9,28 +9,35 @@ import com.example.thi.championship.DBHelper;
  */
 public class Match {
     private long id;
-    private long team1id;
-    private long team2id;
+    private Team team1=new Team();
+    private Team team2=new Team();
     private String startTime;
     private long winnerId;
-    private DBHelper dbHelper;
 
-    public Match(Context context) {
-        dbHelper = new DBHelper(context);
+
+    public Match(long id, long team1, long team2, String startTime, long winnerId) {
+        this.id = id;
+        this.team1.setId(team1);
+        this.team2.setId(team2);
+        this.startTime = startTime;
+        this.winnerId = winnerId;
     }
 
-    public Match(Context context, long team1id, long team2id, String startTime) {
-        dbHelper = new DBHelper(context);
-        this.team1id = team1id;
-        this.team2id = team2id;
+
+    public Match() {
+    }
+
+    public Match(Team team1, Team team2, String startTime) {
+        this.team1 = team1;
+        this.team2 = team2;
         this.startTime = startTime;
     }
 
     @Override
     public String toString() {
-        String out = dbHelper.findTeamById(team1id).getName() + " versus(slovospb) " + dbHelper.findTeamById(team2id).getName() + " (" + startTime + ")";
-        if (team1id == winnerId) out = dbHelper.findTeamById(team1id).getName() + "(W) versus(slovospb) " + dbHelper.findTeamById(team2id).getName() + " (" + startTime + ")";
-        if (team2id == winnerId) out = dbHelper.findTeamById(team1id).getName() + " versus(slovospb) " + dbHelper.findTeamById(team2id).getName() + "(W) (" + startTime + ")";
+        String out = team1.getName() + " versus(slovospb) " + team2.getName() + " (" + startTime + ")";
+        if (team1.getId() == winnerId) out = team1.getName() + "(W) versus(slovospb) " + team2.getName() + " (" + startTime + ")";
+        if (team2.getId() == winnerId) out = team1.getName() + " versus(slovospb) " + team2.getName() + "(W) (" + startTime + ")";
         return out;
     }
 
@@ -41,16 +48,16 @@ public class Match {
         this.id = id;
     }
     public long getTeam1id() {
-        return team1id;
+        return team1.getId();
     }
     public void setTeam1id(long team1id) {
-        this.team1id = team1id;
+        this.team1.setId(team1id);
     }
     public long getTeam2id() {
-        return team2id;
+        return team2.getId();
     }
     public void setTeam2id(long team2id) {
-        this.team2id = team2id;
+        this.team2.setId(team2id);
     }
     public String getStartTime() {
         return startTime;
@@ -63,5 +70,21 @@ public class Match {
     }
     public void setWinnerId(long winnerId) {
         this.winnerId = winnerId;
+    }
+
+    public Team getTeam1() {
+        return team1;
+    }
+
+    public void setTeam1(Team team1) {
+        this.team1 = team1;
+    }
+
+    public Team getTeam2() {
+        return team2;
+    }
+
+    public void setTeam2(Team team2) {
+        this.team2 = team2;
     }
 }
